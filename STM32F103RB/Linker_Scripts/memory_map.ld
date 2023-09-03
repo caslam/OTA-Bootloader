@@ -1,0 +1,11 @@
+MEMORY
+{
+  BOOTROM  (rx)  : ORIGIN = 0x08000000, LENGTH = 0x00004000
+  APPROM   (rx)  : ORIGIN = 0x08004000, LENGTH = 0x0001C000
+  RAM      (rwx) : ORIGIN = 0x20000000, LENGTH = 0x00005000
+}
+
+bootrom_start = ORIGIN(BOOTROM);
+bootrom_size = LENGTH(BOOTROM);
+approm_start = ORIGIN(APPROM);
+approm_size = LENGTH(APPROM);
